@@ -1,4 +1,11 @@
-HopecincyHerokuCom::Application.routes.draw do
+HopeCincy::Application.routes.draw do
+  devise_for :users
+
+  root :to => "site#index"
+
+  resources :organizations, :only => [:create, :show]
+  match '/organizations/new(/:org_type)' => 'organizations#new', :as => :new_organization
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

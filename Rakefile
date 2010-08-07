@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-HopecincyHerokuCom::Application.load_tasks
+HopeCincy::Application.load_tasks

@@ -1,0 +1,10 @@
+%h2 Sign Up
+= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = f.inputs do
+    = f.input :name, :hint => 'i.e. John Smith'
+    = f.input :email
+    = f.input :password
+    = f.input :password_confirmation, :label => 'Confirm', :required => true
+  = f.buttons do
+    = f.commit_button "Sign Up"
+= render :partial => "devise/shared/links"

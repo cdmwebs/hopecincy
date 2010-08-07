@@ -1,0 +1,7 @@
+coverage/*
+config/database.yml
+spec/support/fixtures/*database*
+*.DS_Store
+debug.log
+pkg
+.bundle

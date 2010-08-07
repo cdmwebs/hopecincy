@@ -1,0 +1,105 @@
+@import "blueprint/reset";
+@import "partials/base";
+@import "blueprint";
+
+@import "partials/page";
+@import "partials/formtastic_base";
+@import "partials/two_col";
+
+body {
+  background-color: #369;
+  color: #333;
+}
+
+#container {
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+a { 
+  text-decoration: none !important;
+  color: #369 !important;
+}
+
+.alert {
+  @extend .notice;
+}
+
+a.button, input[type=submit] {
+  $button: darken(#57b42c, 16);
+  @include fancy-button($button, 14px, 20px);
+  padding: .75em 1em !important;
+}
+
+a.button {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+#header, #footer {
+  @include append(1);
+  @include prepend(1);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#header {
+  border-bottom: 1px solid #999;
+  margin-bottom: 2em;
+  position: relative;
+  #account {
+    position: absolute;
+    top: 1em;
+    right: 3.5em;
+  }
+}
+
+#content {
+  @include prepend(1);
+}
+
+#sidebar {
+  @include append(1);
+}
+
+#footer {
+  padding-bottom: .5em;
+  p {
+    text-align: right;
+    color: #999;
+  }
+}
+
+form.formtastic {
+  @include stack-form(100%,"auto","10px");
+  ol li {
+    padding-bottom: 1em;
+    label abbr {
+      padding-left: 5px;
+    }
+    p.inline-errors {
+      padding: .25em 0;
+      color: red;
+    }
+    p.inline-hints {
+      color: #999;
+      padding: 5px 0;
+    }
+    label {
+      font-size: 130%;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+    input[type=text], input[type=password] {
+      padding: 5px;
+      font-size: 140%;
+      border: 1px solid #999;
+    }
+    input[type=checkbox] {
+      margin-right: 1em;
+    }
+  }
+}

@@ -3,3 +3,8 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 database.yml
+.rvmrc
+public/stylesheets/ie.css
+public/stylesheets/ie6.css
+public/stylesheets/print.css
+public/stylesheets/screen.css
